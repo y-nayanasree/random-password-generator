@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="icon">🔐</div>
+        <h1>Password Generator</h1>
+        <p class="subtitle">Create a strong, random password in seconds.</p>
+
+        <div class="password-box">
+            <input type="text" id="password" placeholder="Your password appears here"
+                   readonly aria-label="Generated password">
+            <button id="copyBtn" type="button">Copy</button>
+        </div>
+
+        <p id="message" class="message" aria-live="polite"></p>
+
+        <div class="length-heading">
+            <label for="length">Password Length</label>
+            <span id="lengthValue">12</span>
+        </div>
+        <input type="range" id="length" min="4" max="32" value="12">
+
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label>
+            <label><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label>
+            <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+            <label><input type="checkbox" id="symbols" checked> Symbols (!@#$)</label>
+        </div>
+
+        <button id="generateBtn" class="generate-btn" type="button">
+            Generate Password
+        </button>
+
+        <p class="note">Tip: Use a longer password with multiple character types.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
